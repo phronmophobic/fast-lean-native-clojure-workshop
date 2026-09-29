@@ -72,18 +72,22 @@
 
 (defn -main [& args]
 
-  (S3L_model3DInit cubeVertices
-                   S3L_CUBE_VERTEX_COUNT
-                   cubeTriangles
-                   S3L_CUBE_TRIANGLE_COUNT
-                   cube-model)
+  ;; S3L_model3DInit(
+  ;;   cubeVertices,
+  ;;   S3L_CUBE_VERTEX_COUNT,
+  ;;   cubeTriangles,
+  ;;   S3L_CUBE_TRIANGLE_COUNT,
+  ;;   &cubeModel);
 
-  (S3L_sceneInit cube-model
-                 1
-                 scene)
-  
-  (let [translation (-> scene :camera :transform :translation)]
-    (Map/.put translation :z (* -2 S3L_F)))
+
+  ;; S3L_sceneInit( // Initialize the scene we'll be rendering.
+  ;;   &cubeModel,  // This is like an array with only one model in it.
+  ;;   1,
+  ;;   &scene);
+
+
+  ;; // shift the camera a little bit backwards so that it's not inside the cube:
+  ;; scene.camera.transform.translation.z = -2 * S3L_F;
 
   (let [num-frames (if-let [num-str (first args)]
                      (parse-long num-str)
@@ -92,21 +96,17 @@
       (clear-screen)
       (reset! screen {})
       
-      (S3L_newFrame)
-      (S3L_drawScene scene)
+    ;; S3L_newFrame();        // has to be called before each frame
+    ;; S3L_newFrame();        // has to be called before each frame
       
       (print-screen @screen)
-      (let [models (:models scene)
-            model (dt-ffi/ptr->struct :S3L_Model3D models)
-            transform (-> model :transform)
-            translation (-> transform :translation)
-            rotation (-> transform :rotation)]
 
-        (Map/.put rotation :y (+ 10 (:y rotation)))
-        (Map/.put rotation :x (+ 4 (:x rotation)))
+    (Thread/sleep 100)
 
-        (Map/.put translation :x (S3L_sin (* i 4)))
-        (Map/.put translation :y (/ (S3L_sin (* i 2)) 2)))
-      
-      (Thread/sleep 100))))
+    ;; // now move and rotate the cube a little to see some movement:
+    ;; scene.models[0].transform.rotation.y += 10;
+    ;; scene.models[0].transform.rotation.x += 4;
+    ;; scene.models[0].transform.translation.x = S3L_sin(i * 4);
+    ;; scene.models[0].transform.translation.y = S3L_sin(i * 2) / 2;
+    )))
 
