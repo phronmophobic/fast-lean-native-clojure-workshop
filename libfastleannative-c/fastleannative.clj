@@ -1,11 +1,11 @@
 (ns fastleannative
-  (:require [babashka.ffi :as ffi :refer [defcfn]]
-            [babashka.fs :as fs]))
+  (:require [babashka.ffi :as ffi :refer [defcfn]]))
 
 
 (ffi/load-system-library "fastleannative")
 
-(defcfn fastleannative-add "fastleannative_add" [:int :int] :int)
+;; (defcfn ??? )
 
-(prn (fastleannative-add 1 2))
+;; (prn (fastleannative-add ???))
+
 

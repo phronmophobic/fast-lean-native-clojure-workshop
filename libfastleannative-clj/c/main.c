@@ -15,7 +15,5 @@ int main(int argc, char **argv) {
 
     printf("Result of 1+2 is %d\n", clj_add(thread, 1, 2));
 
-    printf("Result of 1-2 is %d\n", clj_sub(thread, 1, 2));
-
     graal_tear_down_isolate(thread);
 }
