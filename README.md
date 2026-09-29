@@ -48,7 +48,7 @@ brew install llvm
 - [libfastleannative-c](https://github.com/phronmophobic/fast-lean-native-clojure-workshop/tree/main/libfastleannative-c) - Write a babashka script to call a simple native function.
 - [libfastleannative-clj](https://github.com/phronmophobic/fast-lean-native-clojure-workshop/tree/main/libfastleannative-clj) - Build a shared library from clojure code using native-image.
 
-- [small3d](https://github.com/phronmophobic/fast-lean-native-clojure-workshop/tree/main/small3d) - (Wrap the single header library, [small3dlib](https://gitlab.com/drummyfish/small3dlib/) to render a rotating 3d cube using ascii.)
+- [small3d](https://github.com/phronmophobic/fast-lean-native-clojure-workshop/tree/main/small3d) - Wrap the single header library, [small3dlib](https://gitlab.com/drummyfish/small3dlib/) to render a rotating 3d cube using ascii.
 
 
 ## Resources
