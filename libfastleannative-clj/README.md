@@ -4,7 +4,9 @@ Build a shared library from clojure code using native-image.
 
 ## Exercise
 
+
 1. Build the uber jar `clojure -T:build uber`
+_Note: make sure `$JAVA_HOME` is set to the graalvm java and that `native-image` is on the `$PATH` when creating the uberjar._
 2. Compile the shared library using native image `./compile-native-image.sh`
 3. Compile the test c program
 
