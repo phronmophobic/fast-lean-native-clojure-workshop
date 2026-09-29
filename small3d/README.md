@@ -2,6 +2,11 @@
 
 Wrap the single header library, [small3dlib](https://gitlab.com/drummyfish/small3dlib/) to produce to render a rotating 3d cube using ascii.
 
+## Goals
+
+- Wrap a non trivial native library
+- Manipulate off-heap data
+
 ## Setup
 
 Requires gcc or clang.
@@ -35,7 +40,8 @@ _Note: make sure the `:project` alias is used or somehow add the following jvm o
 1. Use a terminal UI library to add keyboard controls
 2. Regenerate the api data using `clojure -X:dump-api`
 3. Inspect the api data in `fastleannative.small3d/api`.
-4. **Advanced**: Use the small3d template to port one of the other examples from `c/third_party/small3dlib/programs/`
+4. Replace dtype-next ffi with [babashka.ffi](https://github.com/babashka/ffi)
+5. **Advanced**: Use the small3d template to port one of the other examples from `c/third_party/small3dlib/programs/`
 
 
 ## License
