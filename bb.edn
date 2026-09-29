@@ -1,0 +1,4 @@
+{:paths ["script"]
+ :deps {babashka/process {:mvn/version "0.6.25"}}
+ :tasks
+ {test {:exec-fn tasks/test}}}

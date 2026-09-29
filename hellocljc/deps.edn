@@ -1,0 +1,7 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.12.6"}}
+ :aliases
+ {:build {:deps {io.github.clojure/tools.build {:mvn/version "0.10.14"}}
+          :ns-default build}
+
+  :native-image {:extra-deps {com.github.clj-easy/graal-build-time {:mvn/version "1.0.6"}}}}}

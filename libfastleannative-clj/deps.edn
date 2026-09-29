@@ -1,0 +1,12 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.12.6"}
+        cnuernber/dtype-next {:mvn/version "11.026"}}
+ :aliases
+ {:build {:deps {io.github.clojure/tools.build {:mvn/version "0.10.14"}}
+          :ns-default build}
+
+  :native-image {:extra-deps {com.github.clj-easy/graal-build-time {:mvn/version "1.0.6"}}
+                 :jvm-opts ["-Dtech.v3.datatype.graal-native=true"
+                            "-Dclojure.compiler.direct-linking=true"
+                            "-Dclojure.spec.skip-macros=true"]}}}
+

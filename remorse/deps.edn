@@ -1,0 +1,9 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.12.6"}
+        com.github.quoll/remorse {:git/tag "0.2.0" :git/sha "5c58cfb"}}
+ :aliases
+ {:build {:deps {io.github.clojure/tools.build {:mvn/version "0.10.14"}}
+          :ns-default build}
+
+  :native-image {:extra-deps {com.github.clj-easy/graal-build-time {:mvn/version "1.0.6"}}}}}
+

@@ -1,0 +1,11 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.12.6"}
+        cnuernber/dtype-next {:mvn/version "11.026"}
+        com.phronemophobic/clong {:mvn/version "1.4.5"}}
+
+ :aliases
+ {:project {:jvm-opts ["-Djna.library.path=c/third_party"
+                       "--enable-native-access=ALL-UNNAMED"]}
+  :dump-api {:extra-deps {org.bytedeco/llvm-platform {:mvn/version "16.0.4-1.5.9"}}
+             :exec-fn fastleannative.small3d.gen-api/dump-api
+             :jvm-opts ["--enable-native-access=ALL-UNNAMED"]}}}
