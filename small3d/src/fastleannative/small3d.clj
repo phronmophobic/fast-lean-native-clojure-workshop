@@ -96,17 +96,21 @@
       (clear-screen)
       (reset! screen {})
       
-    ;; S3L_newFrame();        // has to be called before each frame
-    ;; S3L_newFrame();        // has to be called before each frame
+      ;; S3L_newFrame();        // has to be called before each frame
+      ;; S3L_drawScene(scene);  /* This starts the scene rendering. The drawPixel
+      ;;                           function will be called to draw it. */
       
       (print-screen @screen)
 
-    (Thread/sleep 100)
+      (Thread/sleep 100)
 
-    ;; // now move and rotate the cube a little to see some movement:
-    ;; scene.models[0].transform.rotation.y += 10;
-    ;; scene.models[0].transform.rotation.x += 4;
-    ;; scene.models[0].transform.translation.x = S3L_sin(i * 4);
-    ;; scene.models[0].transform.translation.y = S3L_sin(i * 2) / 2;
-    )))
+      (let [models (:models scene)
+            ;; equivalent to scene.models[0]
+            model (dt-ffi/ptr->struct :S3L_Model3D models)]
+        ;; // now move and rotate the cube a little to see some movement:
+        ;; scene.models[0].transform.rotation.y += 10;
+        ;; scene.models[0].transform.rotation.x += 4;
+        ;; scene.models[0].transform.translation.x = S3L_sin(i * 4);
+        ;; scene.models[0].transform.translation.y = S3L_sin(i * 2) / 2;
+        ))))
 
