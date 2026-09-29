@@ -80,9 +80,7 @@
 
   (S3L_sceneInit cube-model
                  1
-                 scene
-                 )
-
+                 scene)
   
   (let [translation (-> scene :camera :transform :translation)]
     (Map/.put translation :z (* -2 S3L_F)))
