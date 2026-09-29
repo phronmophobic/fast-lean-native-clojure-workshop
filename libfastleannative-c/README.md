@@ -27,6 +27,6 @@ clang -shared fastleannative.o -o libfastleannative.so
 
 ### Bonus
 
-Add more functions to `fastleannative.c` and call them from `fastleannative.bb`. Try using different types beside integers.
+Add more functions to `fastleannative.c` and call them from `fastleannative.bb`. Try using different types beside integers. Remember to recompile the c code into the native library after changing `fastleannative.c`.
 
 
