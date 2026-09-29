@@ -1,6 +1,3 @@
-[submodule "jank-commons"]
-	path = jank-commons
-	url = https://github.com/jank-lang/commons.git
 [submodule "small3d/c/third_party/small3dlib"]
 	path = small3d/c/third_party/small3dlib
 	url = https://gitlab.com/drummyfish/small3dlib.git
