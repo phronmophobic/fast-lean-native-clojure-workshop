@@ -3,6 +3,8 @@ name: Check
 on:
   workflow_dispatch:
   push:
+    branches:
+      - answers
 
 jobs:
   check:
