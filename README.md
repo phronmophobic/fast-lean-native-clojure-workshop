@@ -14,16 +14,6 @@ This session is designed for developers familiar with Clojure.
 
 ## Setup
 
-### All systems
-
-
-- Install native-image
-  - https://www.graalvm.org/downloads/
-  - https://www.graalvm.org/latest/getting-started/
-    - For all exercises, make sure `$JAVA_HOME` is set to the graalvm java and that `native-image` is on the `$PATH`
-- Install babashka - https://github.com/babashka/babashka#installation
-- Make sure to initialize and update the repository submodules `git submodule update --init`
-
 ### Linux
 
 ```sh
@@ -39,6 +29,16 @@ Install homebrew: https://brew.sh/
 ```sh
 brew install llvm
 ```
+
+### All systems
+
+- Install native-image
+  - https://www.graalvm.org/downloads/
+  - https://www.graalvm.org/latest/getting-started/
+    - For all exercises, make sure `$JAVA_HOME` is set to the graalvm java and that `native-image` is on the `$PATH`
+- Install babashka - https://github.com/babashka/babashka#installation
+- Make sure to initialize and update the repository submodules `git submodule update --init`
+
 
 ## Exercises
 
