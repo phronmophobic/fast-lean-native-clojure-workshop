@@ -26,9 +26,9 @@ _Note: make sure the `:project` alias is used or somehow add the following jvm o
 ```
 
 1. Port the commented c code in `-main` found in `src/fastleannative/small3d.clj` to clojure.
-2. Edit the script to change the rotation of the cube.
-3. Edit the script to change the translate of the cube.
-
+2. Test the program with `clojure -M:project -m fastleannative.small3d
+3. Edit the script to change the rotation of the cube.
+4. Edit the script to change the translate of the cube.
 
 ## Bonus
 
