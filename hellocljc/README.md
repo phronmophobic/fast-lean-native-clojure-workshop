@@ -9,7 +9,7 @@ Goal: Make sure your computer is setup to use `native-image`. Compare the size a
 ### Steps
 
 1. Create an uberjar `clojure -T:build uber`
-_Note: make sure `$JAVA_HOME` is set to the graalvm java and that `native-image` is on the `$PATH` when creating the uberjar._
+_Note: make sure `$JAVA_HOME` is set to the graalvm java when creating the uberjar._
 2. Compile the native image `./compile-native-image.sh`
 3. Run the native image `./target/hello-world-native-image`
 4. Compare the sizes
