@@ -24,7 +24,10 @@ cd c
 ```
 5. Inspect `main.c`, and `target/libfastleannative.h`.
 6. Add a `clj_sub` function to `src/fastleannative/libfastleannative.clj` which subtracts two integers 
-7. Update `main.c` to call `clj_sub`.
+7. Recompile the native image.
+8. Update `main.c` to call `clj_sub`.
+9. Recompile the c file and rerun the test program.
+
 
 ## Bonus
 
