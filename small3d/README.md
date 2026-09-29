@@ -11,6 +11,61 @@ Wrap the single header library, [small3dlib](https://gitlab.com/drummyfish/small
 
 Requires gcc or clang.
 
+## Dtype next primer
+
+Dtype-next provides utilities for working with off-heap memory.
+
+```clojure
+(require '[tech.v3.datatype.struct :as dt-struct])
+(import 'java.util.Map)
+
+(dt-struct/define-datatype! :vec3
+                            [{:name :x :datatype :float32}
+                             {:name :y :datatype :float32}
+                             {:name :z :datatype :float32}])
+
+(def myvec
+  (dt-struct/map->struct :vec3
+                       {:x 1
+                        :y 2
+                        :z 3}))
+;; set values using java.util.Map/.put
+;; equivalent to the following c code
+;; myvec.x = 42;
+(java.util.Map/.put myvec :x 42)
+(:x myvec) ;; => 42.0
+
+
+;; Structs can be nested
+(dt-struct/define-datatype! :twovec
+                            [{:name :v1 :datatype :vec3}
+                             {:name :v2 :datatype :vec3}])
+
+(def mytwovec 
+  (dt-struct/map->struct 
+   :twovec
+   {:v1 (dt-struct/map->struct :vec3
+                               {:x 1
+                                :y 2
+                                :z 3})
+    :v2 (dt-struct/map->struct :vec3
+                               {:x 1
+                                :y 2
+                                :z 3})}))
+
+(import 'java.util.Map)
+
+;; You can update values in nested structs
+;; equivalent to the following c code
+;; mytwovec.v1.x = 42
+(Map/.put (:v1 mytwovec) :x 42)
+
+mytwovec
+;; {:v1 {:x 42.0, :y 2.0, :z 3.0},
+;;  :v2 {:x 1.0, :y 2.0, :z 3.0}}
+
+```
+
 ### Compile libterminalcube
 ```sh
 cd small3d/c/third_party
