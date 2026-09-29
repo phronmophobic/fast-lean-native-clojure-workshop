@@ -70,6 +70,7 @@
                                  {:container-type :native-heap}))
 
 
+;; from https://gitlab.com/drummyfish/small3dlib/-/blob/master/programs/terminalCube.c?ref_type=heads#L58
 (defn -main [& args]
 
   ;; S3L_model3DInit(
