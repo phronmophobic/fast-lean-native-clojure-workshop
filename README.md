@@ -44,9 +44,10 @@ brew install llvm
 
 - [boom](https://github.com/phronmophobic/fast-lean-native-clojure-workshop/tree/main/boom) - Crash the JVM!
 - [hellocljc](https://github.com/phronmophobic/fast-lean-native-clojure-workshop/tree/main/hellocljc) - Create a hello world native image standalone executable and measure performance
+- [remorse](https://github.com/phronmophobic/fast-lean-native-clojure-workshop/tree/main/remorse) - Create a native image standalone executable for non trivial program and measure performance.
 - [libfastleannative-c](https://github.com/phronmophobic/fast-lean-native-clojure-workshop/tree/main/libfastleannative-c) - Write a babashka script to call a simple native function.
 - [libfastleannative-clj](https://github.com/phronmophobic/fast-lean-native-clojure-workshop/tree/main/libfastleannative-clj) - Build a shared library from clojure code using native-image.
-- [remorse](https://github.com/phronmophobic/fast-lean-native-clojure-workshop/tree/main/remorse) - Create a native image standalone executable for non trivial program and measure performance.
+
 - [small3d](https://github.com/phronmophobic/fast-lean-native-clojure-workshop/tree/main/small3d) - (Wrap the single header library, [small3dlib](https://gitlab.com/drummyfish/small3dlib/) to render a rotating 3d cube using ascii.)
 
 
