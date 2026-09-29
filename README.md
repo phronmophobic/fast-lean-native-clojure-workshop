@@ -53,7 +53,11 @@ brew install llvm
 
 ## Resources
 
-- Supplemental material: https://blog.phronemophobic.com/fastleannative.html
+- [Supplemental material](https://blog.phronemophobic.com/fastleannative.html): Contains a review of many of the topics covered during the workshop as well as more in-depth info about related topics.
+- [dtype-next overview](https://cnuernber.github.io/dtype-next/overview.html)
+- [babashka.ffi](https://github.com/babashka/ffi)
+- [https://jank-lang.org/](jank)
+- [Comparison of ffi options for clojure](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQAiX80h3wsbwo7qv8aAOp2TFLO6V2dJV5Ay24xihhKObDhT7HwS0nbZGUPxLjaJc9rSwoN-tNksFda/pubhtml#gid=1519410866)
 - https://www.graalvm.org/latest/reference-manual/native-image/guides/build-native-shared-library/
 
 ## License
