@@ -13,7 +13,7 @@ Requires gcc or clang.
 
 ## Dtype next primer
 
-Dtype-next provides utilities for working with off-heap memory.
+[Dtype-next](https://github.com/cnuernber/dtype-next/) provides utilities for working with off-heap memory.
 
 ```clojure
 (require '[tech.v3.datatype.struct :as dt-struct])
