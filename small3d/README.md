@@ -6,8 +6,6 @@ Wrap the single header library, [small3dlib](https://gitlab.com/drummyfish/small
 
 Requires gcc or clang.
 
-## Usage
-
 ### Compile libterminalcube
 ```sh
 cd small3d/c/third_party
@@ -21,7 +19,23 @@ CC=clang ./compile.sh
 
 ### Exercise
 
+_Note: make sure the `:project` alias is used or somehow add the following jvm opts_
+```
+-Djna.library.path=c/third_party
+--enable-native-access=ALL-UNNAMED
+```
 
+1. Port the commented c code in `-main` found in `src/fastleannative/small3d.clj` to clojure.
+2. Edit the script to change the rotation of the cube.
+3. Edit the script to change the translate of the cube.
+
+
+## Bonus
+
+1. Use a terminal UI library to add keyboard controls
+2. Regenerate the api data using `clojure -X:dump-api`
+3. Inspect the api data in `fastleannative.small3d/api`.
+4. **Advanced**: Use the small3d template to port one of the other examples from `c/third_party/small3dlib/programs/`
 
 
 ## License
