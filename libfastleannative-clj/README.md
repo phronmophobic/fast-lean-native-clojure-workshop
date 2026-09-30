@@ -27,7 +27,14 @@ cd c
 7. Recompile the native image.
 8. Update `main.c` to call `clj_sub`.
 9. Recompile the c file and rerun the test program.
+10. Inspect the symbols of the created shared library
 
+Linux: `nm -g target/libfastleannative.so`
+Mac OSX: `nm -g target/libfastleannative.dylib`
+11. Inspect the dependencies of the shared library
+
+Linux: `ldd target/libfastleannative.so`
+Mac OSX: `otool -L target/libfastleannative.so`
 
 ## Bonus
 
