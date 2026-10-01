@@ -23,7 +23,7 @@ clang -fPIC -c fastleannative.c -o fastleannative.o
 clang -shared fastleannative.o -o libfastleannative.so 
 ```
 
-2. Edit the babashka script, `fastleannative.bb` to call `fastleannative_add`
+2. Edit the babashka script, `fastleannative.clj` to call `fastleannative_add`
 
 ### Bonus
 

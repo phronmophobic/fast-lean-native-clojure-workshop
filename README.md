@@ -26,6 +26,7 @@ sudo apt-get install build-essential zlib1g-dev
 
 Install homebrew: https://brew.sh/
 
+Install clang:
 ```sh
 brew install llvm
 ```
@@ -59,6 +60,8 @@ brew install llvm
 - [https://jank-lang.org/](jank)
 - [Comparison of ffi options for clojure](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQAiX80h3wsbwo7qv8aAOp2TFLO6V2dJV5Ay24xihhKObDhT7HwS0nbZGUPxLjaJc9rSwoN-tNksFda/pubhtml#gid=1519410866)
 - https://www.graalvm.org/latest/reference-manual/native-image/guides/build-native-shared-library/
+- clojure specific graalvm native resources: https://github.com/clj-easy/graal-docs, https://github.com/BrunoBonacci/graalvm-clojure
+- #graalvm on the clojurians slack
 
 ## License
 
